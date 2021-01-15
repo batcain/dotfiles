@@ -1,0 +1,17 @@
+setxkbmap tr &
+xset r rate 200 200 &
+sh ~/Clones/dotfiles/dwm_status-bar.sh &
+
+feh --bg-center ~/Downloads/maxim-verehin-batman-verehin.jpg &
+
+#FOR GODDAMN JAVA APPS TO WORK
+export _JAVA_AWT_WM_NONREPARENTING=1 &
+wmname LG3D &
+
+#FOR NOT GOING BLIND
+xgamma -gamma 0.8 &
+
+xcompmgr &
+flameshot &
+copyq &
+exec dwm
