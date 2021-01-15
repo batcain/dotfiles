@@ -1,4 +1,4 @@
-# config
+# README
 It is pretty tiring set new systems from scratch, so this repo includes patched and changed dwm/st folders and shell configs.
 
 To start with, if you want to make dwm fonts to work use `pacman -Ss <fontname>`. Otherwise your terminal will be pretty f\*cked up. I use *Hack* font, so I had to install that with command below:
@@ -21,13 +21,11 @@ Since you are dealing with st terminal it is recommended to use mono fonts. Anyw
 
 How to set up dwm:
 
-> git clone https://github.com/batcain/config/
-> cd config/dwm-stuff ; tar -xzvf dwm.tar.gz ; tar -xzvf st.tar.gz
-
+`git clone https://github.com/batcain/config/`
+`cd config/dwm-stuff ; tar -xzvf dwm.tar.gz ; tar -xzvf st.tar.gz`
 Go to dwm folder. Run the command below then do the same thing for st folder.
-> make && sudo make clean install
-
-> mv .xinitrc ~/
+`make && sudo make clean install`
+then;
+`mv .xinitrc ~/`
 At this point if there are no problems about compiling you are good to go. Just keep in mind that xorg server should be already down before you run the command below.
-
-> startx 
+`startx` 
