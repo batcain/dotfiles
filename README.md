@@ -22,10 +22,18 @@ Since you are dealing with st terminal it is recommended to use mono fonts. Anyw
 How to set up dwm:
 
 `git clone https://github.com/batcain/config/`
+
 `cd config/dwm-stuff ; tar -xzvf dwm.tar.gz ; tar -xzvf st.tar.gz`
+
 Go to dwm folder. Run the command below then do the same thing for st folder.
+
 `make && sudo make clean install`
+
 then;
+
 `mv .xinitrc ~/`
+
 At this point if there are no problems about compiling you are good to go. Just keep in mind that xorg server should be already down before you run the command below.
-`startx` 
+
+`startx`
+
