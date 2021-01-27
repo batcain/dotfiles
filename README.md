@@ -23,6 +23,8 @@ How to set up dwm:
 
 `git clone https://github.com/batcain/config/`
 
+
+
 `cd config/dwm-stuff ; tar -xzvf dwm.tar.gz ; tar -xzvf st.tar.gz`
 
 Go to dwm folder. Run the command below then do the same thing for st folder.
@@ -37,3 +39,36 @@ At this point if there are no problems about compiling you are good to go. Just 
 
 `startx`
 
+### STUFF TO ADD:
+ -> Emoji patch for dwm (not st it still crashes if you add any modern emoji (; __ ;)
+Here is how:
+* First, make sure you downloaded `ttf-joypixels` package.
+* Second, Turn following command snippet to comment block.
+
+```
+/*
+         * Do not allow using color fonts. This is a workaround for a BadLength
+         * error from Xft with color glyphs. Modelled on the Xterm workaround. See
+         * https://bugzilla.redhat.com/show_bug.cgi?id=1498269
+         * https://lists.suckless.org/dev/1701/30932.html
+         * https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=916349
+         * and lots more all over the internet.
+         *
+        FcBool iscol;
+        if(FcPatternGetBool(xfont->pattern, FC_COLOR, 0, &iscol) == FcResultMatch && iscol) {
+                XftFontClose(drw->dpy, xfont);
+                return NULL;
+        }
+*/
+```
+
+-> Add new keybindings to oftenly used programs; such as firefox, discord, blueman-applet, some IDES maybe? 
+Here is how one simply add new keybinding;
+
+* Open dwm/config.def.h
+* Under `/* commands */` line there are char arrays of commands to be added. For example if I want to add firefox on ModKey+W binding I will add:
+`static constant char *firefox[] = { "firefox", NULL};`
+* Than go to modifiers and add following line:
+`{ MODKEY,                       XK_w,      spawn,          {.v = firefox } },`
+* cp config.def.h config.h ; make ; sudo make clean install
+* restart dwm
