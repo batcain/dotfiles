@@ -72,3 +72,6 @@ Here is how one simply add new keybinding;
 `{ MODKEY,                       XK_w,      spawn,          {.v = firefox } },`
 * cp config.def.h config.h ; make ; sudo make clean install
 * restart dwm
+
+-> Since I am a technology peasant I think I might want to add a desktop notification sender when something fail on error logs in journalctl or dmesg?
+Well what could go wrong?
