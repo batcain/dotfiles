@@ -3,6 +3,7 @@ It is pretty tiring set new systems from scratch, so this repo includes patched 
 
 To start with, if you want to make dwm fonts to work use `pacman -Ss <fontname>`. Otherwise your terminal will be pretty f\*cked up. I use *Hack* font, so I had to install that with command below:
 > sudo pacman -S ttf-dejavu ttf-opensans
+> yay -S ttf-envy-code-r
 
 Since you are dealing with st terminal it is recommended to use mono fonts. Anyways here are some patches that I have applied on dwm and st:
 
